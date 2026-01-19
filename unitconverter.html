@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Universal Unit Converter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Multi-Unit Converter</h1>
+
+    <div class="converter">
+      <label for="unit-type">Choose Unit Type:</label>
+      <select id="unit-type" onchange="updateSubUnits()">
+        <option value="length">Length</option>
+        <option value="area">Area</option>
+        <option
+                value="datarate">Data Transfer Rate</option>
+        <option
+                value="digitalstorage">Digital Storage</option>
+        <option value="energy">Energy</option>
+        <option value="frequency">Frequency</option>
+        <option value="fueleconomy">Fuel Economy</option>
+        <option value="mass">Mass</option>
+        <option value="planeangle">Plane Angle</option>
+        <option value="pressure">Pressure</option>
+        <option value="speed">Speed</option>
+        <option value="time">Time</option>
+        <option value="volume">Volume</option>
+      </select>
+    </div>
+
+    <div class="converter">
+      <label for="from-unit">From:</label>
+      <select id="from-unit"></select>
+    </div>
+
+    <div class="converter">
+      <label for="to-unit">To:</label>
+      <select id="to-unit"></select>
+    </div>
+
+    <div class="converter">
+      <label for="input-value">Value:</label>
+      <input type="number" id="input-value" oninput="convertUnits()">
+    </div>
+
+    <div class="result">
+      <h2>Converted Value:</h2>
+      <p id="converted-value">0</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
